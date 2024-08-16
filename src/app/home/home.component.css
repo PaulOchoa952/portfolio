@@ -37,7 +37,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
- h2 {
+h2 {
     color: #333;
 }
 
@@ -45,18 +45,19 @@ h2.name {
     color: #ffffff;
     text-align: center;
     font-size: 2rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 h1.title {
     color: #f3ec31;
     text-align: center;
     font-size: 1.5rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-p.about-me{
-    text-align:justify;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+p.about-me {
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .skills, .projects {
@@ -70,16 +71,52 @@ p.about-me{
     margin-bottom: 1rem;
 }
 
+
+.work-experience {
+    position: relative;
+    padding-left: 20px;
+}
+
+.progress-line {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ccc;
+    z-index: -1;
+}
+
+.job-container {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.job {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.job-container:not(:last-child) .job {
+    margin-bottom: 20px;
+}
+
+.job-container::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: 1;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #333;
     color: #fff;
 }
-/* header {
- /*   background-image: url('/assets/images/background2.jpg'); /* Replace with your image path */
- /*   background-size: cover; /* Adjusts the image to cover the entire nav area */
-/*    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-  /*  background-position: center; /* Centers the image */
- /*   padding: 10px; /* Adds some padding to the nav */
-/*} */
