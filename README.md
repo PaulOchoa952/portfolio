@@ -1,27 +1,32 @@
-# MyPortfolio
+# Mi Proyecto en AWS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.2.
+Este README detalla los pasos seguidos para desplegar un sitio web en AWS utilizando S3 y GitHub Actions.
 
-## Development server
+## Pasos Seguidos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 1. Crear una Cuenta de AWS
 
-## Code scaffolding
+Entrar a la consola de AWS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+(assests/screenshots/1.png/)
 
-## Build
+### 2. Configurar el Bucket de S3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Luego, configuramos un bucket de S3 para alojar nuestro sitio web estático.
+(assests/screenshots/2.png/)
 
-## Running unit tests
+![Configuración del Bucket S3](images/s3-bucket-setup.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Configurar GitHub Actions
 
-## Running end-to-end tests
+En GitHub, configuramos un workflow de Actions para desplegar automáticamente nuestro sitio cada vez que hacemos un push.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Configuración de GitHub Actions](images/github-actions-setup.png)
 
-## Further help
+## Resultados
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+¡El sitio web está ahora en línea y funcionando correctamente!
+
+![Sitio Web en Línea](images/website-online.png)
+
+
