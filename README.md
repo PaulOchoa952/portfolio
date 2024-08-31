@@ -8,7 +8,7 @@ Este README detalla los pasos seguidos para desplegar un sitio web en AWS utiliz
 
 Entrar a la consola de AWS
 
-(assests/Screenshots/1..png/)
+(assets/Screenshots/1..png/)
 
 ### 2. Configurar el Bucket de S3
 
