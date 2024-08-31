@@ -1,8 +1,8 @@
-# Mi Proyecto en AWS
+# My AWS final Project
 
 This README details the steps taken to deploy a website on AWS using S3 and GitHub Actions.
 
-## Pasos Seguidos
+## Steps
 
 ### 1. Create an account in aws console
 
@@ -12,7 +12,7 @@ Get into AWS console
 
 ### 2.Create a new bucket in Amazon S3
 
-[Screenshot 2](/src/assets/Screenshots/2.png)
+![Screenshot 2](/src/assets/Screenshots/2.png)
 
 ### 3.Enter a unique name for your bucket (e.g., my-portfolio-web).
 ### 4.Select the region closest to you or that best suits your needs.
@@ -170,7 +170,7 @@ Once it's complete, verify that your website is properly deployed in the S3 buck
 
 
 
-## Resultados
+## Results
 
 The website is now online and working properly!
 
