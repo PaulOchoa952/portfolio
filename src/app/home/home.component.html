@@ -4,33 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
     </style>
 </head>
 
 <body>
-    <header>
-        <h1 class="title">Jr.Software Engineer</h1>
-        <h2 class="name">Paul Alejandro Ochoa Meza</h2>
-    </header>
-
-    <nav>
-        <a href="#about">About me</a>
-        <a href="#skills">Skills</a>
-<!--         <a href="#projects">Projects</a>
- -->        <a href="#contact">Contacto</a>
-    </nav>
+    <div class="header-container">
+        <header>
+            <h1 class="title">Junior Software Engineer <i class="fas fa-laptop-code"></i></h1>
+            <h2 class="name">Paul Alejandro Ochoa Meza</h2>
+        </header>
+    </div>
+    <div class="nav-container">
+        <nav>
+            <a href="#about">About me</a>
+<!--             <a href="#skills">Skills</a>
+ -->        <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 
     <section id="about">
-        <h2>About me</h2>
+        <!-- <h2>About me</h2> -->
         <p class="about-me">Hi there! I'm Paul Alejandro Ochoa Meza a software engineer with 1+ year of experience building full stack applications from scratch.
            Though I'm a recent graduate, I have a strong foundation in computer science and software engineering principles.I've collaborated with
             cross-functional teams to define, design, and ship new features. I'm passionate about learning new technologies and building software solutions
-            that make a positive impact on people's lives. I'm currently seeking a full-time software engineering role where I can continue to grow as a developer.
+            that make a positive impact on people's lives. I'm currently seeking a full-time software engineering role where I can continue growing as a developer.
         </p>
     </section>
 
-    <section id="skills">
+<!--     <section id="skills">
         <h2 class="skills-h2">Skills</h2>
         <div class="skills">
             <div class="skill">
@@ -74,9 +78,9 @@
                     </p>
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="work-experience">
-        <h2 class="section-work">Experiencia laboral</h2>
+        <h2 class="section-work">Relevant work experience</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
@@ -95,6 +99,7 @@
                     <p><strong>Company:</strong>"Asociación de hoteles y moteles de Tepic"</p>
                     <br>
                     <p><strong>Duration:</strong> January 2023 - July 2023</p>
+                    <p><strong>GitHub Repo: </strong> <a href="https://github.com/PaulOchoa952/PAT-035" target="_blank">PAT-035</a></p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -118,6 +123,8 @@
                     <p><strong>Company:</strong>"Ingeniería y proyectos imperio S.A DE C.V"</p>
                     <br>
                     <p><strong>Duration:</strong> January 2024 - July 2024</p>
+                    
+                    <p><strong>GitHub Repo: </strong> <a href="https://github.com/PaulOchoa952/stockMasterPro" target="_blank">StockMasterPro</a></p>
                 </div>
             </div>
             <!-- Agrega más experiencias de trabajo aquí -->
@@ -125,27 +132,59 @@
     </section>
     
 
-<!--     <section id="projects">
-        <h2>Proyectos</h2>
+     <section id="projects">
+        <h2 class="section-project">Projects</h2>
         <div class="projects">
             <div class="project">
-                <h3>Proyecto 1</h3>
-                <p>Descripción breve de un proyecto destacable que has realizado, con tecnologías utilizadas.</p>
+                <h3>Data-Managagement-and visualization-Deploy</h3>
+                <p>Set up a local development enviroment that could simulate a production-like for data analytics </p>
+                    <p><strong>GitHub Repo: </strong> 
+                        <a href="https://github.com/PaulOchoa952/Data-Management-and-Visualization-Deployment" target="_blank">
+                            Data-Management-and-Visualization-Deployment
+                        </a></p>
             </div>
             <div class="project">
-                <h3>Proyecto 2</h3>
-                <p>Descripción breve de otro proyecto destacable.</p>
+                <h3>FRONTEND-AUCTION</h3>
+                <p>Fronted web app created to manage multiple car's auctions.It's consuming a REST-API that provides the necessary data to display the cars and their respective auctions.
+                </p>
+            <p><strong>GitHub Repo: </strong> 
+                <a href="https://github.com/PaulOchoa952/FRONTEND-AUCTION" target="_blank">
+                    FRONTED-AUCTION
+                </a>
+            </p>
+            <p>
+                <strong>Github API repo: </strong>
+                <a href="https://github.com/PaulOchoa952/CarsAuction-WEBSERVICES" target="_blank">
+                    API-CarsAuction
+                </a>
+            <p>
+                <strong>Live Demo: </strong>
+                <a href="https://subasta-servweb.web.app/login" target="_blank">
+                    FRONTEND-AUCTION_HOST
+                </a>
+            </p>
             </div>
         </div>
-    </section> -->
+    </section> 
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme a través de mi correo electrónico: <a href="mailto:paalochoame@ittepic.edu.mx">paalochoame&#64;ittepic.edu.mx</a></p>
+    <section id="contacto">
+        <h2>Contact</h2>
+        <p>Get in touch with me: 
+            <a href="mailto:paalochoame@ittepic.edu.mx" style="color: rgb(7, 7, 7);">
+                paalochoame&#64;ittepic.edu.mx 
+            </a>
+            <i class="fas fa-envelope" style="color: white;"></i>
+        </p>
+        <p>Resumee: 
+            <a href="../assets/docs/Paul CV-devops.pdf" target="_blank" style="color: rgb(7, 7, 7);">
+                Resume
+            </a>
+            <i class="fas fa-file-pdf" style="color: white;"></i>
+        </p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Paul Alejandro Ochoa Meza. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Paul Alejandro Ochoa Meza. All rights reserved.</p>
     </footer>
 </body>
 
