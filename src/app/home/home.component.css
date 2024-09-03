@@ -158,7 +158,32 @@ p.about-me {
     .Frontend{
         text-align: center;
     }
-
+    
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between icons */
+        margin-top: 20px;
+    }
+    
+    .icons a {
+        color: #444; /* Default icon color */
+        font-size: 2.5rem; /* Increase icon size */
+        transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    }
+    
+    .icons a:hover {
+        transform: scale(1.2); /* Scale up on hover */
+        color: #0077b5; /* Change color on hover (LinkedIn blue as an example) */
+    }
+    
+    .icons a:nth-child(2):hover {
+        color: #333; /* GitHub black */
+    }
+    
+    .icons a:nth-child(3):hover {
+        color: #fc6d26; /* GitLab orange */
+    }
     footer {
         text-align: center;
         padding: 1rem;
