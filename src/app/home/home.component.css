@@ -70,14 +70,14 @@ p.about-me {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-.skills, .projects {
+/* .skills, .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 48%;
     margin-bottom: 1rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif
-}
+} */
 
 
     /* Estilo general para la línea del tiempo */
@@ -93,6 +93,7 @@ p.about-me {
         position: relative;
         margin: 20px 0;
         padding-left: 30px;
+        padding-right: 30px;
     }
     
     /* Línea vertical de la línea del tiempo */
@@ -154,6 +155,7 @@ p.about-me {
      .projects,.section-project {
         margin-left: 25px;
         text-align: left;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
      }
     .Frontend{
         text-align: center;
@@ -189,4 +191,30 @@ p.about-me {
         padding: 1rem;
         background-color: #565656;
         color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+    }
+
+    .project-content {
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: #c6c2c2;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        position: relative;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .project-content h3 {
+        margin: 0 0 5px;
+    }
+    
+    /* Estilo para las descripciones */
+    .project-content p {
+        margin: 0;
+    }
+
+    .item-project {
+        position: relative;
+        margin: 20px 0;
+        padding-left: 30px;
+        padding-right: 30px;
     }
