@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -56,26 +59,34 @@ section {
 h2 {
     color: #007bff;
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 h2.name {
     color: #ffffff;
     text-align: center;
     font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 700;
 }
 
 h1.title {
     color: #fbfbfb;
     text-align: center;
     font-size: 2.5rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 p.about-me {
     margin: 0 25px;
     text-align: justify;
-    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
 }
 
 .timeline {
@@ -126,10 +137,13 @@ p.about-me {
 .timeline-content h3 {
     margin: 0 0 5px;
     color: #007bff;
+    font-family: 'Monstserrat', sans-serif;
+    font-weight: 700;
 }
 
 .timeline-content p {
     margin: 0;
+    line-height: 1.6;
 }
 
 .company-logo {
@@ -165,6 +179,8 @@ p.about-me {
 .skill h3 {
     margin-bottom: 10px;
     color: #007bff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .skill p {
@@ -228,10 +244,13 @@ footer {
 .project-content h3 {
     margin: 0 0 5px;
     color: #007bff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .project-content p {
     margin: 0;
+    line-height: 1.6;
 }
 
 .item-project {
