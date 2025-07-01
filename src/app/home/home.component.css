@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #064a92;
     color: #fff;
     padding: 2rem 0;
     text-align: center;
@@ -31,7 +31,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #007bff;
+    background-color: #064a92;
     padding: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -58,7 +58,7 @@ section {
 }
 
 h2 {
-    color: #007bff;
+    color: #064a92;
     margin-bottom: 1rem;
     font-family: 'Montserrat', sans-serif; /* Use Montserrat for headings */
     font-weight: 700;
@@ -114,7 +114,7 @@ p.about-me {
     top: 0;
     width: 2px;
     height: 100%;
-    background-color: #007bff;
+    background-color: #064a92;
 }
 
 .timeline-content {
@@ -135,13 +135,13 @@ p.about-me {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #007bff;
+    background-color: #064a92;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-content h3 {
     margin: 0 0 5px;
-    color: #007bff;
+    color: #064a92;
     font-family: 'Montserrat', sans-serif; /* Consistent font */
     font-weight: 700;
 }
@@ -177,7 +177,7 @@ p.about-me {
     font-weight: bold; /* Make the text bold */
     padding: 10px 30px; /* Add padding */
     margin-bottom: 20px; /* Add space below the heading */
-    color: #007bff; /* Set a color for the heading */
+    color: #064a92; /* Set a color for the heading */
 }
 
 .skill {
@@ -191,7 +191,7 @@ p.about-me {
 
 .skill h3 {
     margin-bottom: 10px;
-    color: #007bff;
+    color: #064a92;
     font-family: 'Montserrat', sans-serif; /* Consistent font */
     font-weight: 700;
 }
@@ -227,7 +227,7 @@ p.about-me {
 
 .icons a:hover {
     transform: scale(1.2);
-    color: #007bff;
+    color: #064a92
 }
 
 .icons a:nth-child(2):hover {
@@ -241,7 +241,7 @@ p.about-me {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #007bff;
+    background-color: #064a92;
     color: #fff;
     font-family: 'Roboto', sans-serif; /* Body font */
     font-size: 23px; /* Consistent font size */
@@ -259,14 +259,14 @@ footer {
 
 .project-content h2 {
     margin: 0 0 5px;
-    color: #007bff;
+    color: #064a92;
     font-family: 'Montserrat', sans-serif; /* Consistent font */
     font-weight: 700;
 }
 
 .project-content h3 {
     margin: 0 0 5px;
-    color: #007bff;
+    color: #064a92;
     font-family: 'Montserrat', sans-serif; /* Consistent font */
     font-weight: 700;
 }
@@ -313,7 +313,7 @@ footer {
 }
 
 .skill h3 {
-    color: #007bff;
+    color: #064a92;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -330,7 +330,7 @@ footer {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: #007bff;
+    background: #064a92;
     border-radius: 2px;
 }
 
@@ -356,7 +356,7 @@ footer {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #007bff;
+    color: #064a92;
     position: relative;
     padding-bottom: 1rem;
 }
@@ -369,7 +369,7 @@ footer {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: #007bff;
+    background: #064a92;
     border-radius: 2px;
 }
 
