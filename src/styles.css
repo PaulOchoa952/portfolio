@@ -8,3 +8,15 @@ html, body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
+
+/* Mobile-specific fixes */
+@media screen and (max-width: 767px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
