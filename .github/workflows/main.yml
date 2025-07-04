@@ -32,4 +32,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Sync S3 bucket
-      run: aws s3 sync ./dist/my-portfolio/browser s3://my-web-portfolio-paul --delete --cache-control "max-age=3600" --acl public-read
+      run: aws s3 sync ./dist/my-portfolio/browser s3://my-web-portfolio-paul --delete --cache-control "max-age=3600"
