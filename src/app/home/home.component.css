@@ -633,6 +633,237 @@ footer p {
     background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
 }
 
+/* Current Roles Section */
+#current-roles {
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#current-roles::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(6, 74, 146, 0.05), rgba(0, 200, 83, 0.05));
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.section-current {
+    margin-left: 25px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #064a92;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #064a92, #00c853);
+    border-radius: 2px;
+}
+
+.current-roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.role-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #064a92, #007bff);
+    transition: all 0.3s ease;
+}
+
+.role-card.featured::before {
+    background: linear-gradient(90deg, #064a92, #00c853);
+}
+
+.role-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(6, 74, 146, 0.2);
+}
+
+.role-card:hover::before {
+    height: 8px;
+}
+
+.role-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.role-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: white;
+    padding: 8px;
+}
+
+.role-logo:hover {
+    transform: scale(1.05);
+}
+
+.role-info h3 {
+    color: #064a92;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.role-info h4 {
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.role-status {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.role-status.current {
+    background: linear-gradient(45deg, #00c853, #4caf50);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 200, 83, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
+}
+
+.role-content p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.role-meta {
+    background: rgba(6, 74, 146, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #064a92;
+}
+
+.role-meta p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.role-meta strong {
+    color: #064a92;
+    font-weight: 600;
+}
+
+/* Featured role special styling */
+.role-card.featured {
+    background: linear-gradient(145deg, #ffffff, #f8fff8);
+    border: 2px solid rgba(0, 200, 83, 0.1);
+}
+
+.role-card.featured .role-meta {
+    background: rgba(0, 200, 83, 0.05);
+    border-left-color: #00c853;
+}
+
+.role-card.featured .role-info h3 {
+    background: linear-gradient(45deg, #064a92, #00c853);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive design for current roles */
+@media screen and (max-width: 768px) {
+    .current-roles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .role-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .role-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .section-current {
+        font-size: 2rem;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .role-card {
+        padding: 1.5rem;
+    }
+    
+    .role-content p {
+        font-size: 1rem;
+    }
+    
+    .section-current {
+        font-size: 1.8rem;
+    }
+}
+
 /* Smooth scrolling and animations */
 html {
     scroll-behavior: smooth;
@@ -806,4 +1037,52 @@ section {
     .icons a {
         font-size: 2rem;
     }
+}
+
+/* Current role styling in timeline */
+.timeline-item.current-role {
+    position: relative;
+}
+
+.timeline-item.current-role::after {
+    background: linear-gradient(45deg, #00c853, #4caf50);
+    box-shadow: 0 0 0 4px #ffffff, 0 0 20px rgba(0, 200, 83, 0.4);
+    animation: pulse-timeline 2s infinite;
+}
+
+@keyframes pulse-timeline {
+    0% { box-shadow: 0 0 0 4px #ffffff, 0 0 0 8px rgba(0, 200, 83, 0.4); }
+    50% { box-shadow: 0 0 0 4px #ffffff, 0 0 0 12px rgba(0, 200, 83, 0.1); }
+    100% { box-shadow: 0 0 0 4px #ffffff, 0 0 0 8px rgba(0, 200, 83, 0.4); }
+}
+
+.timeline-content.current {
+    background: linear-gradient(145deg, #f8fff8, #ffffff);
+    border-left: 5px solid #00c853;
+    position: relative;
+}
+
+.timeline-content.current::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    height: 5px;
+    background: linear-gradient(90deg, #00c853, #4caf50);
+    border-radius: 15px 15px 0 0;
+}
+
+.current-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #00c853, #4caf50);
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+    animation: pulse 2s infinite;
 }
