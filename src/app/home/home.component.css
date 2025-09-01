@@ -10,17 +10,30 @@ body {
 }
 
 header {
-    background-color: #064a92;
+    background: linear-gradient(135deg, #064a92 0%, #0056b3 50%, #007bff 100%);
     color: #fff;
-    padding: 2rem 0;
+    padding: 4rem 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,0 1000,100 1000,0"/></svg>');
+    background-size: cover;
 }
 
 .header-container {
     max-width: 1280px;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
 .nav-container {
@@ -31,9 +44,13 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #064a92;
+    background: rgba(6, 74, 146, 0.95);
     padding: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 nav a {
@@ -50,11 +67,23 @@ nav a:hover {
 
 section {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #064a92, #007bff, #0056b3);
 }
 
 h2 {
@@ -69,115 +98,200 @@ h2 {
 h2.name {
     color: #ffffff;
     text-align: center;
-    font-size: 2rem;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h1.title {
     color: #fbfbfb;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #ffffff, #e3f2fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 p.about-me {
-    margin: 20px 25px;
-    padding: 10px;
+    margin: 30px 0;
+    padding: 20px;
     text-align: justify;
-    font-family: 'Roboto', sans-serif; /* Body font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.8;
-    letter-spacing: 1px;
-    font-size: 25px; /* Adjusted for consistency */
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    color: #444;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #064a92;
 }
 
 .timeline {
     position: relative;
-    padding: 10px 0;
-    margin: 20px auto;
+    padding: 20px 0;
+    margin: 30px auto;
     max-width: 1200px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #064a92, #007bff, #064a92);
+    border-radius: 2px;
 }
 
 .timeline-item {
     position: relative;
-    margin: 20px 0;
-    padding-left: 30px;
+    margin: 40px 0;
+    padding-left: 80px;
     padding-right: 30px;
 }
 
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: #064a92;
+    display: none;
 }
 
 .timeline-content {
-    padding: 10px 20px;
-    border-radius: 6px;
-    background-color: #e9ecef;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     position: relative;
-    font-family: 'Roboto', sans-serif; /* Body font */
-    font-size: 20px; /* Consistent font size */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    border-left: 5px solid #064a92;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-item::after {
     content: '';
     position: absolute;
-    left: -6px;
-    top: 10px;
-    width: 12px;
-    height: 12px;
+    left: 22px;
+    top: 30px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: #064a92;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #064a92, #007bff);
+    box-shadow: 0 0 0 4px #ffffff, 0 0 15px rgba(6, 74, 146, 0.3);
+    z-index: 2;
 }
 
 .timeline-content h3 {
-    margin: 0 0 5px;
+    margin: 0 0 15px;
     color: #064a92;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.timeline-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #064a92, #007bff);
+    border-radius: 2px;
 }
 
 .timeline-content p {
-    margin: 0;
-    line-height: 1.6;
+    margin: 15px 0;
+    line-height: 1.7;
+    color: #555;
+}
+
+.timeline-content img {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content img:hover {
+    transform: scale(1.05);
 }
 
 .company-logo {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+    width: 80px;
+    height: 60px;
+    margin-top: 15px;
+    border-radius: 8px;
 }
 
 .section-work {
     margin-left: 25px;
     text-align: left;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #064a92;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
 }
 
-.projects,
+.section-work::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #064a92, #007bff);
+    border-radius: 2px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 25px;
+}
+
 .section-project {
     margin-left: 25px;
     text-align: left;
-    font-size: 20px; /* Adjusted for consistency */
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 10px 0;
+    margin-bottom: 2rem;
+    color: #064a92;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 
-.section-project {
-    margin-left: 25px; /* Keep the left margin */
-    text-align: left; /* Keep the text alignment */
-    font-size: 28px; /* Set the desired font size */
-    font-weight: bold; /* Make the text bold */
-    padding: 10px 30px; /* Add padding */
-    margin-bottom: 20px; /* Add space below the heading */
-    color: #064a92; /* Set a color for the heading */
+.section-project::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #064a92, #007bff);
+    border-radius: 2px;
 }
 
 .skill {
@@ -212,75 +326,165 @@ p.about-me {
     color: #ffdd57;
 }
 
+#icons {
+    background: linear-gradient(135deg, #064a92 0%, #007bff 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#icons::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-20px, -20px) rotate(360deg); }
+}
+
 .icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .icons a {
-    color: #444;
+    color: #fff;
     font-size: 4.5rem;
-    transition: transform 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .icons a:hover {
-    transform: scale(1.2);
-    color: #064a92
+    transform: scale(1.3) translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.icons a:nth-child(1):hover {
+    color: #0077b5; /* LinkedIn blue */
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .icons a:nth-child(2):hover {
-    color: #333;
+    color: #333; /* GitHub dark */
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .icons a:nth-child(3):hover {
-    color: #fc6d26;
+    color: #fc6d26; /* GitLab orange */
+    background: rgba(255, 255, 255, 0.9);
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #064a92;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #064a92 0%, #007bff 100%);
     color: #fff;
-    font-family: 'Roboto', sans-serif; /* Body font */
-    font-size: 23px; /* Consistent font size */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.05)"><polygon points="0,100 1000,0 1000,100"/></svg>');
+    background-size: cover;
+}
+
+footer p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 .project-content {
-    padding: 10px 20px;
-    border-radius: 6px;
-    background-color: #e9ecef;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     position: relative;
-    font-family: 'Roboto', sans-serif; /* Body font */
-    font-size: 20px; /* Consistent font size */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-top: 4px solid #064a92;
 }
 
-.project-content h2 {
-    margin: 0 0 5px;
-    color: #064a92;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
-    font-weight: 700;
+.project-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+.project-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #064a92, #007bff, #0056b3);
+    transition: all 0.3s ease;
+}
+
+.project-content:hover::before {
+    height: 6px;
+}
+
+.project-content h2,
 .project-content h3 {
-    margin: 0 0 5px;
+    margin: 0 0 15px;
     color: #064a92;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.4;
 }
 
 .project-content p {
-    margin: 0;
-    line-height: 1.6;
+    margin: 15px 0;
+    line-height: 1.7;
+    color: #555;
+}
+
+.project-content a {
+    color: #064a92;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.project-content a:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
 }
 
 .item-project {
     position: relative;
     margin: 20px 0;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 #contacto {
@@ -401,29 +605,75 @@ footer {
 .skill i:nth-child(8) { animation-delay: 0.8s; }
 .skill i:nth-child(9) { animation-delay: 0.9s; }
 
-/* Add these media queries at the end of your CSS file */
+/* Special section styling */
+#about {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-left: 5px solid #064a92;
+    position: relative;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(6, 74, 146, 0.1), rgba(0, 123, 255, 0.1));
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#work-experience {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+#projects {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+}
+
+/* Smooth scrolling and animations */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.6s ease-out;
+}
 
 /* For tablets and smaller screens */
 @media screen and (max-width: 768px) {
     /* Adjust header and text sizes */
     h1.title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     h2.name {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     p.about-me {
-        font-size: 18px;
-        margin: 15px;
-        padding: 5px;
+        font-size: 1.1rem;
+        margin: 20px 0;
+        padding: 15px;
     }
 
     /* Adjust section padding */
     section {
-        padding: 1rem;
-        margin: 1rem auto;
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
     }
 
     /* Adjust skills grid */
@@ -435,18 +685,44 @@ footer {
 
     /* Make icons slightly smaller on mobile */
     .skill i, .skill img {
-        font-size: 60px;
+        font-size: 3rem;
     }
 
     /* Adjust timeline */
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-item::after {
+        left: 12px;
+    }
+
     .timeline-content {
-        font-size: 16px;
-        padding: 8px 15px;
+        font-size: 1rem;
+        padding: 20px 15px;
     }
 
     /* Adjust social icons */
     .icons a {
-        font-size: 3rem;
+        font-size: 3.5rem;
+        padding: 15px;
+    }
+
+    /* Adjust projects grid */
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Adjust section titles */
+    .section-work,
+    .section-project {
+        font-size: 2rem;
+        margin-left: 15px;
     }
 }
 
