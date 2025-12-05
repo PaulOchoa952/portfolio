@@ -387,14 +387,13 @@ p.about-me {
     margin-top: 15px;
     border-radius: 8px;
     max-width: 100%;
-    height: auto;
     object-fit: contain;
 }
 
 @media screen and (max-width: 480px) {
     .company-logo {
         width: 60px;
-        height: auto;
+        height: 45px;
     }
 }
 
@@ -1071,7 +1070,6 @@ footer p {
     background: white;
     padding: 8px;
     max-width: 100%;
-    height: auto;
 }
 
 @media screen and (max-width: 480px) {
