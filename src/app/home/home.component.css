@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/* Fonts are loaded via link tags in index.html to avoid budget issues */
 
 body {
     font-family: 'Roboto', sans-serif; /* Body font */
@@ -7,6 +6,18 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 header {
@@ -16,6 +27,18 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 2.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 2rem 1rem;
+    }
 }
 
 header::before {
@@ -59,10 +82,21 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 nav a:hover {
     color: #ffdd57;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+nav a:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
 }
 
 section {
@@ -74,6 +108,37 @@ section {
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        margin: 1.5rem 0.75rem;
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    #work-experience {
+        padding: 1.25rem 0.75rem;
+        margin: 1.5rem 0.5rem;
+    }
+    
+    #work-experience .timeline {
+        margin: 12px 0;
+        padding: 8px 0;
+    }
+    
+    #work-experience .timeline-item {
+        margin: 18px 0;
+    }
 }
 
 section::before {
@@ -93,6 +158,7 @@ h2 {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    word-wrap: break-word;
 }
 
 h2.name {
@@ -104,6 +170,8 @@ h2.name {
     margin-top: 1rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 h1.title {
@@ -119,6 +187,8 @@ h1.title {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 p.about-me {
@@ -135,6 +205,25 @@ p.about-me {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #064a92;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media screen and (max-width: 768px) {
+    p.about-me {
+        text-align: left;
+        padding: 15px;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p.about-me {
+        padding: 12px;
+        margin: 15px 0;
+        line-height: 1.6;
+    }
 }
 
 .timeline {
@@ -142,6 +231,7 @@ p.about-me {
     padding: 20px 0;
     margin: 30px auto;
     max-width: 1200px;
+    width: 100%;
 }
 
 .timeline::before {
@@ -162,6 +252,18 @@ p.about-me {
     padding-right: 30px;
 }
 
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timeline-item {
+        margin: 25px 0;
+    }
+}
+
 .timeline-item::before {
     display: none;
 }
@@ -176,6 +278,33 @@ p.about-me {
     font-size: 1.1rem;
     border-left: 5px solid #064a92;
     transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.timeline-content a {
+    color: #064a92;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: inline-block;
+    min-height: 44px;
+    padding: 4px 0;
+    line-height: 1.5;
+}
+
+.timeline-content a:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.timeline-content a:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .timeline-content:hover {
@@ -203,6 +332,7 @@ p.about-me {
     font-weight: 700;
     font-size: 1.5rem;
     position: relative;
+    line-height: 1.3;
 }
 
 .timeline-content h3::after {
@@ -217,9 +347,17 @@ p.about-me {
 }
 
 .timeline-content p {
-    margin: 15px 0;
+    margin: 12px 0;
     line-height: 1.7;
     color: #555;
+}
+
+.timeline-content p:first-of-type {
+    margin-top: 15px;
+}
+
+.timeline-content p:last-of-type {
+    margin-bottom: 15px;
 }
 
 .timeline-content img {
@@ -227,10 +365,19 @@ p.about-me {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
     transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .timeline-content img:hover {
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px) {
+    .timeline-content img {
+        max-width: 100px;
+    }
 }
 
 .company-logo {
@@ -238,6 +385,15 @@ p.about-me {
     height: 60px;
     margin-top: 15px;
     border-radius: 8px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 480px) {
+    .company-logo {
+        width: 60px;
+        height: 45px;
+    }
 }
 
 .section-work {
@@ -247,9 +403,27 @@ p.about-me {
     font-size: 2.5rem;
     font-weight: 700;
     color: #064a92;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .section-work {
+        margin-left: 0;
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-work {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+    }
 }
 
 .section-work::after {
@@ -271,6 +445,20 @@ p.about-me {
     margin-left: 25px;
 }
 
+@media screen and (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects {
+        gap: 1rem;
+    }
+}
+
 .section-project {
     margin-left: 25px;
     text-align: left;
@@ -281,6 +469,20 @@ p.about-me {
     color: #064a92;
     font-family: 'Montserrat', sans-serif;
     position: relative;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .section-project {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-project {
+        font-size: 1.75rem;
+    }
 }
 
 .section-project::after {
@@ -369,6 +571,17 @@ p.about-me {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.2);
+    min-width: 64px;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icons a:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
 }
 
 .icons a:hover {
@@ -401,6 +614,21 @@ footer {
     font-size: 1.1rem;
     position: relative;
     overflow: hidden;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 1.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
 }
 
 footer::before {
@@ -431,6 +659,26 @@ footer p {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     border-top: 4px solid #064a92;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+    .project-content {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+    
+    .project-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
 }
 
 .project-content:hover {
@@ -475,11 +723,23 @@ footer p {
     font-weight: 600;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: inline-block;
+    min-height: 44px;
+    padding: 4px 0;
+    line-height: 1.5;
 }
 
 .project-content a:hover {
     color: #007bff;
     border-bottom-color: #007bff;
+}
+
+.project-content a:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .item-project {
@@ -549,10 +809,22 @@ footer p {
 .skill i {
     font-size: 3.5rem;
     transition: transform 0.3s ease;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill i:hover {
     transform: scale(1.2);
+}
+
+.skill i:focus {
+    outline: 3px solid #064a92;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 /* Skills section title */
@@ -563,6 +835,19 @@ footer p {
     color: #064a92;
     position: relative;
     padding-bottom: 1rem;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-h2 {
+        font-size: 1.75rem;
+    }
 }
 
 .skills-h2::after {
@@ -662,6 +947,20 @@ footer p {
     margin-bottom: 2rem;
     position: relative;
     padding-bottom: 1rem;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .section-current {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-current {
+        font-size: 1.75rem;
+    }
 }
 
 .section-current::after {
@@ -684,6 +983,19 @@ footer p {
     z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+    .current-roles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .current-roles-grid {
+        gap: 1rem;
+    }
+}
+
 .role-card {
     background: linear-gradient(145deg, #ffffff, #f8f9fa);
     border-radius: 20px;
@@ -693,6 +1005,16 @@ footer p {
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+    .role-card {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
 }
 
 .role-card::before {
@@ -729,6 +1051,14 @@ footer p {
     border-bottom: 2px solid #f0f0f0;
 }
 
+@media screen and (max-width: 480px) {
+    .role-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
 .role-logo {
     width: 80px;
     height: 80px;
@@ -738,6 +1068,14 @@ footer p {
     transition: transform 0.3s ease;
     background: white;
     padding: 8px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .role-logo {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .role-logo:hover {
@@ -788,6 +1126,15 @@ footer p {
     color: #555;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 480px) {
+    .role-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
 
 .role-meta {
@@ -846,7 +1193,7 @@ footer p {
     
     .section-current {
         font-size: 2rem;
-        margin-left: 15px;
+        margin-left: 0;
     }
 }
 
@@ -860,7 +1207,8 @@ footer p {
     }
     
     .section-current {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+        margin-left: 0;
     }
 }
 
@@ -889,10 +1237,14 @@ section {
     /* Adjust header and text sizes */
     h1.title {
         font-size: 2.5rem;
+        line-height: 1.2;
+        word-wrap: break-word;
     }
 
     h2.name {
         font-size: 2rem;
+        line-height: 1.3;
+        word-wrap: break-word;
     }
 
     p.about-me {
@@ -905,6 +1257,15 @@ section {
     section {
         padding: 2rem 1.5rem;
         margin: 2rem 1rem;
+    }
+    
+    #work-experience {
+        padding: 1.5rem 1rem;
+        margin: 2rem 0.75rem;
+    }
+    
+    #work-experience .timeline {
+        margin: 15px 0;
     }
 
     /* Adjust skills grid */
@@ -919,22 +1280,58 @@ section {
         font-size: 3rem;
     }
 
-    /* Adjust timeline */
+    /* Adjust timeline for tablet - simplified */
+    .timeline {
+        padding: 15px 0;
+        margin: 20px auto;
+    }
+    
     .timeline::before {
-        left: 20px;
+        display: none; /* Hide timeline line on tablet and mobile */
     }
     
     .timeline-item {
-        padding-left: 60px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 25px 0;
+        width: 100%;
     }
     
     .timeline-item::after {
-        left: 12px;
+        display: none; /* Hide timeline dots on tablet and mobile */
     }
 
     .timeline-content {
         font-size: 1rem;
-        padding: 20px 15px;
+        padding: 20px 18px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin: 0;
+        width: 100%;
+        border-left: 4px solid #064a92;
+    }
+    
+    .timeline-content.current {
+        border-left-width: 5px;
+        border-left-color: #00c853;
+    }
+    
+    .timeline-content p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin: 12px 0;
+        line-height: 1.6;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+    
+    .timeline-content img {
+        margin: 12px 0;
+        max-width: 80px;
     }
 
     /* Adjust social icons */
@@ -953,7 +1350,8 @@ section {
     .section-work,
     .section-project {
         font-size: 2rem;
-        margin-left: 15px;
+        margin-left: 0;
+        margin-bottom: 1.25rem;
     }
 }
 
@@ -962,21 +1360,28 @@ section {
     /* Further reduce header sizes */
     h1.title {
         font-size: 1.75rem;
+        line-height: 1.2;
+        padding: 0 0.5rem;
     }
 
     h2.name {
         font-size: 1.25rem;
+        line-height: 1.3;
+        padding: 0 0.5rem;
     }
 
     /* Adjust navigation */
     nav {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 0.5rem;
+        padding: 1rem;
     }
 
     nav a {
-        margin: 0.25rem 0;
+        margin: 0;
+        justify-content: center;
+        text-align: center;
     }
 
     /* Adjust about me text */
@@ -985,16 +1390,73 @@ section {
         letter-spacing: 0.5px;
     }
 
-    /* Adjust timeline */
+    /* Adjust timeline for mobile - full width, no line */
+    .timeline {
+        padding: 10px 0;
+        margin: 15px auto;
+    }
+    
+    .timeline::before {
+        display: none; /* Completely hide timeline line on mobile */
+    }
+    
     .timeline-item {
-        padding-left: 20px;
-        padding-right: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 20px 0;
+        width: 100%;
+    }
+    
+    .timeline-item::after {
+        display: none; /* Completely hide timeline dots on mobile */
+    }
+    
+    .timeline-content {
+        padding: 18px 16px;
+        font-size: 0.95rem;
+        margin: 0;
+        width: 100%;
+        border-radius: 12px;
+        width: 100%;
+        border-left: 4px solid #064a92;
+    }
+    
+    .timeline-content.current {
+        border-left-width: 5px;
+        border-left-color: #00c853;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.15rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+    
+    .timeline-content img {
+        max-width: 70px;
+        margin: 10px 0;
+    }
+    
+    .current-badge {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.6rem;
+        margin-left: 0.5rem;
     }
 
     /* Make project content more compact */
     .project-content {
-        font-size: 16px;
-        padding: 8px 12px;
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
     }
 
     /* Adjust footer */
@@ -1014,9 +1476,15 @@ section {
 
     /* Adjust section margins and padding */
     .section-project {
-        font-size: 22px;
-        padding: 8px 15px;
-        margin-left: 15px;
+        font-size: 1.75rem;
+        padding: 8px 0;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .section-work {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -1024,6 +1492,11 @@ section {
 @media screen and (max-width: 320px) {
     h1.title {
         font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    h2.name {
+        font-size: 1.1rem;
     }
 
     .skill i, .skill img {
@@ -1031,11 +1504,29 @@ section {
     }
 
     section {
-        padding: 0.75rem;
+        padding: 1rem 0.75rem;
+        margin: 1rem 0.5rem;
     }
 
     .icons a {
         font-size: 2rem;
+        padding: 15px;
+        min-width: 56px;
+        min-height: 56px;
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+    
+    .timeline::before {
+        left: 12px;
+    }
+    
+    .timeline-item::after {
+        left: 4px;
+        width: 12px;
+        height: 12px;
     }
 }
 
@@ -1060,6 +1551,18 @@ section {
     background: linear-gradient(145deg, #f8fff8, #ffffff);
     border-left: 5px solid #00c853;
     position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-content.current {
+        border-left-width: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timeline-content.current {
+        border-left-width: 4px;
+    }
 }
 
 .timeline-content.current::before {
