@@ -1162,13 +1162,15 @@ footer p {
     }
 }
 
-.role-meta {
+/* Role meta box: only for Current Roles cards, not for timeline (work experience) */
+.role-card .role-meta {
     background: rgba(6, 74, 146, 0.05);
     padding: 1rem;
     border-radius: 10px;
     border-left: 4px solid #064a92;
 }
 
+.role-card .role-meta p,
 .role-meta p {
     margin: 0.5rem 0;
     font-size: 1rem;
@@ -1178,6 +1180,21 @@ footer p {
 .role-meta strong {
     color: #064a92;
     font-weight: 600;
+}
+
+/* Timeline role meta: same card look, no separate box */
+.timeline-content .role-meta {
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-top: 1rem;
+}
+
+.timeline-content .role-technologies {
+    border-top: none;
+    padding-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Featured role special styling */
