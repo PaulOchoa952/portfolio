@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 /* Fonts are loaded via link tags in index.html to avoid budget issues */
 
+:root {
+  --font-heading: 'Goldman', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body);
   overflow-x: hidden;
 }
 

@@ -154,7 +154,7 @@ section::before {
 h2 {
     color: #064a92;
     margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif; /* Use Montserrat for headings */
+    font-family: 'Goldman', sans-serif; /* Headings */
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -165,7 +165,7 @@ h2.name {
     color: #ffffff;
     text-align: center;
     font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 400;
     margin-top: 1rem;
     letter-spacing: 2px;
@@ -178,7 +178,7 @@ h1.title {
     color: #fbfbfb;
     text-align: center;
     font-size: 3.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
@@ -282,6 +282,23 @@ p.about-me {
     overflow-wrap: break-word;
 }
 
+.timeline-content-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.timeline-content-header .company-logo {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.timeline-content-header h3 {
+    margin: 0;
+}
+
 .timeline-content a {
     color: #064a92;
     text-decoration: none;
@@ -326,13 +343,21 @@ p.about-me {
 }
 
 .timeline-content h3 {
-    margin: 0 0 15px;
+    margin: 0;
     color: #064a92;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     position: relative;
     line-height: 1.3;
+}
+
+.timeline-content-header h3::after {
+    display: none;
+}
+
+.timeline-content .timeline-content-header + p {
+    margin-top: 0;
 }
 
 .timeline-content h3::after {
@@ -363,7 +388,7 @@ p.about-me {
 .timeline-content img {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
+    margin: 0;
     transition: transform 0.3s ease;
     max-width: 100%;
     height: auto;
@@ -383,7 +408,7 @@ p.about-me {
 .company-logo {
     width: 80px;
     height: 60px;
-    margin-top: 15px;
+    margin: 0;
     border-radius: 8px;
     max-width: 100%;
     object-fit: contain;
@@ -399,7 +424,7 @@ p.about-me {
 .section-work {
     margin-left: 25px;
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: #064a92;
@@ -467,7 +492,7 @@ p.about-me {
     padding: 10px 0;
     margin-bottom: 2rem;
     color: #064a92;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     position: relative;
     word-wrap: break-word;
 }
@@ -508,7 +533,7 @@ p.about-me {
 .skill h3 {
     margin-bottom: 10px;
     color: #064a92;
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-family: 'Goldman', sans-serif; /* Consistent font */
     font-weight: 700;
 }
 
@@ -705,7 +730,7 @@ footer p {
 .project-content h3 {
     margin: 0 0 15px;
     color: #064a92;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.4;
@@ -940,7 +965,7 @@ footer p {
 .section-current {
     margin-left: 25px;
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: #064a92;
@@ -1084,7 +1109,7 @@ footer p {
 
 .role-info h3 {
     color: #064a92;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
@@ -1092,7 +1117,7 @@ footer p {
 
 .role-info h4 {
     color: #555;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
     margin: 0 0 0.5rem 0;
@@ -1311,6 +1336,16 @@ section {
         border-left: 4px solid #064a92;
     }
     
+    .timeline-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+    
+    .timeline-content-header .company-logo {
+        margin-bottom: 8px;
+    }
+    
     .timeline-content.current {
         border-left-width: 5px;
         border-left-color: #00c853;
@@ -1323,15 +1358,10 @@ section {
         line-height: 1.6;
     }
     
+    .timeline-content-header h3,
     .timeline-content h3 {
         font-size: 1.3rem;
-        margin-bottom: 12px;
         line-height: 1.3;
-    }
-    
-    .timeline-content img {
-        margin: 12px 0;
-        max-width: 80px;
     }
 
     /* Adjust social icons */
@@ -1417,8 +1447,18 @@ section {
         margin: 0;
         width: 100%;
         border-radius: 12px;
-        width: 100%;
         border-left: 4px solid #064a92;
+    }
+    
+    .timeline-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content-header .company-logo {
+        max-width: 70px;
+        margin-bottom: 6px;
     }
     
     .timeline-content.current {
@@ -1426,20 +1466,15 @@ section {
         border-left-color: #00c853;
     }
     
+    .timeline-content-header h3,
     .timeline-content h3 {
         font-size: 1.15rem;
         line-height: 1.3;
-        margin-bottom: 12px;
     }
     
     .timeline-content p {
         font-size: 0.9rem;
         line-height: 1.6;
-        margin: 10px 0;
-    }
-    
-    .timeline-content img {
-        max-width: 70px;
         margin: 10px 0;
     }
     
