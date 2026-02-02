@@ -161,7 +161,7 @@ h2 {
     word-wrap: break-word;
 }
 
-h2.name {
+.name {
     color: #ffffff;
     text-align: center;
     font-size: 2.5rem;
@@ -1266,7 +1266,7 @@ section {
         word-wrap: break-word;
     }
 
-    h2.name {
+    .name {
         font-size: 2rem;
         line-height: 1.3;
         word-wrap: break-word;
@@ -1394,7 +1394,7 @@ section {
         padding: 0 0.5rem;
     }
 
-    h2.name {
+    .name {
         font-size: 1.25rem;
         line-height: 1.3;
         padding: 0 0.5rem;
@@ -1530,7 +1530,7 @@ section {
         line-height: 1.2;
     }
     
-    h2.name {
+    .name {
         font-size: 1.1rem;
     }
 
